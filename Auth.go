@@ -430,11 +430,11 @@ func main() {
 	router.POST("/by_email", login_signUp_Email_Handler)
 	router.POST("/check_username", check_username_Handler)
 	//private
-	router.POST("/............", post_level_Handler)           //THERE IS NO AUTH, VERY UNSAFE
-	router.GET("/.............", get_levels_Handler)           //THERE IS NO AUTH, VERY UNSAFE
-	router.POST("/............", player_winner_db_Handler)     //THERE IS NO AUTH, VERY UNSAFE
-	router.POST("/............", match_end_Handler)            //THERE IS NO AUTH, VERY UNSAFE
-	router.POST("/............", online_push_Handler)          //THERE IS NO AUTH, VERY UNSAFE
+	router.POST("/post_level", post_level_Handler)           //THERE IS NO AUTH, VERY UNSAFE 
+	router.GET("/get_levels", get_levels_Handler)           //THERE IS NO AUTH, VERY UNSAFE
+	router.POST("/player_winner_db", player_winner_db_Handler)     //THERE IS NO AUTH, VERY UNSAFE        AT LEAST ADD RANDOM CHARACTERS TO ROUTE!!!
+	router.POST("/match_end", match_end_Handler)            //THERE IS NO AUTH, VERY UNSAFE
+	router.POST("/online_push", online_push_Handler)          //THERE IS NO AUTH, VERY UNSAFE
 	//logout
 	router.GET("/logout", LogOutHandler)
 	router.RunTLS("yourip:8080", "/home/fullchain.pem", "/home/privkey.pem")
